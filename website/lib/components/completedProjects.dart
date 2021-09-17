@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../constants.dart';
 
@@ -105,7 +107,152 @@ class Completed extends StatelessWidget {
               ),
             ),
           ],
-        )
+        ),
+        Row(
+          children: [
+            Container(
+              // height: MediaQuery.of(context).size.height * .5,
+              width: MediaQuery.of(context).size.width * .4,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                          'Ethics In Engineering  - PLTW Digital Electronics',
+                          style: TextStyle(
+                              color: Constants.primaryColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold))),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .05,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'images/pinto.png',
+                        height: MediaQuery.of(context).size.height * .5,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.width * .16),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * .25,
+                  width: MediaQuery.of(context).size.width * .4,
+                  child: Container(
+                      child: RichText(
+                    text: TextSpan(children: [
+                      TextSpan(
+                          text:
+                              "We begun the ethics in enginerring unit by looking at the Ford Pinto. In short, the Ford pinto was the car manufacturers cheapest car that had some 'explosive' defects. You can view our slide presentation ",
+                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      TextSpan(
+                          text: 'here.',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () async {
+                              if (await canLaunch(
+                                  'https://drive.google.com/file/d/1iSB2y1iLxzmuiNf40Bsrb0rOVAWA1XB4/view'))
+                                await launch(
+                                    'https://drive.google.com/file/d/1iSB2y1iLxzmuiNf40Bsrb0rOVAWA1XB4/view');
+                            }),
+                    ]),
+                  )),
+                ),
+              ),
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              // height: MediaQuery.of(context).size.height * .5,
+              width: MediaQuery.of(context).size.width * .4,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .05,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'images/monstors.png',
+                        height: MediaQuery.of(context).size.height * .5,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.width * .16),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * .25,
+                  width: MediaQuery.of(context).size.width * .4,
+                  child: Container(
+                      child: RichText(
+                    text: TextSpan(children: [
+                      TextSpan(
+                          text:
+                              "We also debated the ethical merits of Monsters Inc.\n\n",
+                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      TextSpan(
+                          text:
+                              "One Team Argued that the CEO was ethical, the presentation can be viewed ",
+                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      TextSpan(
+                          text: 'here.\n\n',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () async {
+                              if (await canLaunch(
+                                  'https://43799b4d-aa73-4f09-a376-2e3961536665.filesusr.com/ugd/d0a509_f4142be62d8540aca8331c580c535dcf.pdf'))
+                                await launch(
+                                    'https://43799b4d-aa73-4f09-a376-2e3961536665.filesusr.com/ugd/d0a509_f4142be62d8540aca8331c580c535dcf.pdf');
+                            }),
+                      TextSpan(
+                          text:
+                              "The other team argued that the CEO was immoral, which can be viewed  ",
+                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      TextSpan(
+                          text: 'here.',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () async {
+                              if (await canLaunch(
+                                  'https://43799b4d-aa73-4f09-a376-2e3961536665.filesusr.com/ugd/d0a509_a22fb0c78be24c2287db81480844b7bd.pdf'))
+                                await launch(
+                                    'https://43799b4d-aa73-4f09-a376-2e3961536665.filesusr.com/ugd/d0a509_a22fb0c78be24c2287db81480844b7bd.pdf');
+                            }),
+                    ]),
+                  )),
+                ),
+              ),
+            )
+          ],
+        ),
       ],
     );
   }

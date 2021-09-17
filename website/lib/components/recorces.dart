@@ -28,7 +28,7 @@ class Recorces extends StatelessWidget {
                     },
                     child: Image.asset(
                       'images/syllubus.png',
-                      height: MediaQuery.of(context).size.height * .1,
+                      height: MediaQuery.of(context).size.height * .07,
                     ),
                   ),
                 ),
@@ -42,7 +42,7 @@ class Recorces extends StatelessWidget {
                     },
                     child: Image.asset(
                       'images/github.png',
-                      height: MediaQuery.of(context).size.height * .1,
+                      height: MediaQuery.of(context).size.height * .08,
                     ),
                   ),
                 ),
@@ -57,7 +57,7 @@ class Recorces extends StatelessWidget {
                     child: Image.asset(
                       'images/autodesk.png',
                       // height: MediaQuery.of(context).size.height * .1,
-                      width: MediaQuery.of(context).size.height * .15,
+                      width: MediaQuery.of(context).size.height * .1,
                     ),
                   ),
                 ),
@@ -71,6 +71,67 @@ class Recorces extends StatelessWidget {
                     },
                     child: Image.asset(
                       'images/repl.png',
+                      // height: MediaQuery.of(context).size.height * .1,
+                      width: MediaQuery.of(context).size.height * .1,
+                    ),
+                  ),
+                ),
+                Tooltip(
+                  preferBelow: true,
+                  message: 'Class website',
+                  child: InkWell(
+                      onTap: () async {
+                        if (await canLaunch(
+                            'https://www.samohiengineering.com/'))
+                          await launch('https://www.samohiengineering.com/');
+                      },
+                      child: Icon(Icons.web,
+                          size: MediaQuery.of(context).size.height * .1,
+                          color: Colors.white)),
+                ),
+                Tooltip(
+                  preferBelow: true,
+                  message: 'Instagram',
+                  child: InkWell(
+                    onTap: () async {
+                      if (await canLaunch(
+                          'https://www.instagram.com/samohipltw/'))
+                        await launch('https://www.instagram.com/samohipltw/');
+                    },
+                    child: Image.asset(
+                      'images/instagram.png',
+                      // height: MediaQuery.of(context).size.height * .1,
+                      width: MediaQuery.of(context).size.height * .1,
+                    ),
+                  ),
+                ),
+                Tooltip(
+                  preferBelow: true,
+                  message: 'Facebook',
+                  child: InkWell(
+                    onTap: () async {
+                      if (await canLaunch(
+                          'https://www.facebook.com/pltw.samohi'))
+                        await launch('https://www.facebook.com/pltw.samohi');
+                    },
+                    child: Image.asset(
+                      'images/fb.png',
+                      // height: MediaQuery.of(context).size.height * .1,
+                      width: MediaQuery.of(context).size.height * .1,
+                    ),
+                  ),
+                ),
+                Tooltip(
+                  preferBelow: true,
+                  message: 'Twitter',
+                  child: InkWell(
+                    onTap: () async {
+                      if (await canLaunch(
+                          'https://twitter.com/samoengineering'))
+                        await launch('https://twitter.com/samoengineering');
+                    },
+                    child: Image.asset(
+                      'images/twitter.png',
                       // height: MediaQuery.of(context).size.height * .1,
                       width: MediaQuery.of(context).size.height * .1,
                     ),

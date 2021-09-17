@@ -7,7 +7,7 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:website/components/recorces.dart';
 
 import '../constants.dart';
-import 'blog.dart';
+import '../components/blog.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -108,26 +108,32 @@ class _HomePageState extends State<HomePage> {
                   HomeContainer(),
                   SizedBox(height: MediaQuery.of(context).size.height * .2),
                   AutoScrollTag(
-                    controller: controller,
-                    index: 1,
-                    key: ValueKey(1),
-                    child: Text('Completed Projects',
-                        style: TextStyle(
-                            color: Constants.primaryvarient,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold)),
-                  ),
+                      controller: controller,
+                      index: 1,
+                      key: ValueKey(1),
+                      child: Container(
+                        padding: EdgeInsets.only(bottom: 10),
+                        alignment: Alignment.centerLeft,
+                        child: Text('Completed Projects',
+                            style: TextStyle(
+                                color: Constants.primaryvarient,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold)),
+                      )),
                   Completed(),
                   SizedBox(height: MediaQuery.of(context).size.height * .2),
                   AutoScrollTag(
                     controller: controller,
                     index: 2,
                     key: ValueKey(2),
-                    child: Text('In Progress',
-                        style: TextStyle(
-                            color: Constants.primaryvarient,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold)),
+                    child: Container(
+                        padding: EdgeInsets.only(bottom: 10),
+                        alignment: Alignment.centerLeft,
+                        child: Text('In Progress',
+                            style: TextStyle(
+                                color: Constants.primaryvarient,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold))),
                   ),
                   InProgress(),
                   SizedBox(height: MediaQuery.of(context).size.height * .2),
@@ -135,23 +141,21 @@ class _HomePageState extends State<HomePage> {
                       controller: controller,
                       index: 3,
                       key: ValueKey(3),
-                      child: Text('Blog',
-                          style: TextStyle(
-                              color: Constants.primaryvarient,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold))),
+                      child: Container(
+                          padding: EdgeInsets.only(bottom: 10),
+                          alignment: Alignment.centerLeft,
+                          child: Text('Blog',
+                              style: TextStyle(
+                                  color: Constants.primaryvarient,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold)))),
                   Blog(),
                   SizedBox(height: MediaQuery.of(context).size.height * .2),
                   AutoScrollTag(
-                    controller: controller,
-                    index: 4,
-                    key: ValueKey(4),
-                    child: Text('Resources',
-                        style: TextStyle(
-                            color: Constants.primaryvarient,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold)),
-                  ),
+                      controller: controller,
+                      index: 4,
+                      key: ValueKey(4),
+                      child: Container()),
                   Recorces(),
                 ]))));
   }
