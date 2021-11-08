@@ -103,6 +103,54 @@ class Blog extends StatelessWidget {
           )
         ],
       ),
+      SizedBox(height: MediaQuery.of(context).size.height * .1),
+      Row(
+        children: [
+          Container(
+            // height: MediaQuery.of(context).size.height * .5,
+            width: MediaQuery.of(context).size.width * .4,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                    alignment: Alignment.topLeft,
+                    child: Text('Blog 3 - October and November 2021',
+                        style: TextStyle(
+                            color: Constants.primaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold))),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .05,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      'images/time_management.png',
+                      height: MediaQuery.of(context).size.height * .5,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * .10),
+              child: Container(
+                height: MediaQuery.of(context).size.height * .555,
+                width: MediaQuery.of(context).size.width * .555,
+                child: Container(
+                    child: new Text(
+                        'The mini project was super fun. Ethan, Kethan, and I are software guys, and as a result we did not have much experience with hardware hacking. It was incredibly rewarding to employ our skillset from digital electronics to this project, as-well as learning new skills including Arduino C. Our group as a whole failed with time management. We left alot of the work until the very last week, which was stressful and unorganized. As a result the piece of advice I would give myself for the remainder of the year is to budget my time better. I have found that when I space out my workload more efficently it results in less stress, and higher quality content.',
+                        style: TextStyle(color: Colors.white, fontSize: 20))),
+              ),
+            ),
+          )
+        ],
+      ),
     ]);
   }
 }

@@ -49,7 +49,7 @@ class Completed extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * .16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .25,
+                  // height: MediaQuery.of(context).size.height * .25,
                   width: MediaQuery.of(context).size.width * .4,
                   child: Container(
                       child: new Text(
@@ -67,7 +67,7 @@ class Completed extends StatelessWidget {
                 padding: EdgeInsets.only(
                     right: MediaQuery.of(context).size.width * .16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .25,
+                  // height: MediaQuery.of(context).size.height * .25,
                   width: MediaQuery.of(context).size.width * .4,
                   child: Container(
                       child: new Text(
@@ -145,7 +145,7 @@ class Completed extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * .16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .25,
+                  // height: MediaQuery.of(context).size.height * .25,
                   width: MediaQuery.of(context).size.width * .4,
                   child: Container(
                       child: RichText(
@@ -203,7 +203,7 @@ class Completed extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * .16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .25,
+                  // height: MediaQuery.of(context).size.height * .25,
                   width: MediaQuery.of(context).size.width * .4,
                   child: Container(
                       child: RichText(
@@ -251,6 +251,131 @@ class Completed extends StatelessWidget {
                 ),
               ),
             )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(
+                    right: MediaQuery.of(context).size.width * .16),
+                child: Container(
+                    // height: MediaQuery.of(context).size.height * .25,
+                    width: MediaQuery.of(context).size.width * .4,
+                    child:
+                        // Container(
+                        //     child: new Text(
+                        //         "An inside joke among our friend group is the literary trope of people in fridges. Because this is the Halloween project and we wanted to make a spooky animatronic, we decided on representing the troupe in miniture form.\n",
+                        //         style: TextStyle(
+                        //             color: Colors.white, fontSize: 20))),
+                        Container(
+                            child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text:
+                                "An inside joke among our friend group is the literary trope of people in fridges. Because this is the Halloween project and we wanted to make a spooky animatronic, we decided on representing the troupe in miniture form.\n\n",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20)),
+                        TextSpan(
+                            text:
+                                "A video of the operational device can be viewed ",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20)),
+                        TextSpan(
+                            text: 'here.\n\n',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                if (await canLaunch(
+                                    'https://drive.google.com/file/d/1o6yizUIJ_2lYWH1jGZ2zKCeC3acyi3mi/view'))
+                                  await launch(
+                                      'https://drive.google.com/file/d/1o6yizUIJ_2lYWH1jGZ2zKCeC3acyi3mi/view');
+                              }),
+                        TextSpan(
+                            text: "You can find our poster ",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20)),
+                        TextSpan(
+                            text: 'here.\n\n',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                if (await canLaunch(
+                                    'https://docs.google.com/presentation/d/1KNbQaHohC8WoTVQ65wj5SDifN53LCVh6azO1F9Nf4QA/edit?usp=sharing'))
+                                  await launch(
+                                      'https://docs.google.com/presentation/d/1KNbQaHohC8WoTVQ65wj5SDifN53LCVh6azO1F9Nf4QA/edit?usp=sharing');
+                              }),
+                        TextSpan(
+                            text:
+                                "These are the presentations we created as progress checks, \n",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20)),
+                        TextSpan(
+                            text: 'Slide 1  ',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                if (await canLaunch(
+                                    'https://docs.google.com/presentation/d/1_bLEnpyvcQO6EqMZDPgbeJZ8sBMkk8EqOkCTRFRFhiU/edit?usp=sharing'))
+                                  await launch(
+                                      'https://docs.google.com/presentation/d/1_bLEnpyvcQO6EqMZDPgbeJZ8sBMkk8EqOkCTRFRFhiU/edit?usp=sharing');
+                              }),
+                        TextSpan(
+                            text: 'Slide 2',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                if (await canLaunch(
+                                    'https://docs.google.com/presentation/d/1GKerrmz__LPKMRWwFLhhm4dKRj2rp47StxHFnozPB2o/edit?usp=sharing'))
+                                  await launch(
+                                      'https://docs.google.com/presentation/d/1GKerrmz__LPKMRWwFLhhm4dKRj2rp47StxHFnozPB2o/edit?usp=sharing');
+                              }),
+                      ]),
+                    ))),
+              ),
+            ),
+            Container(
+              // height: MediaQuery.of(context).size.height * .5,
+              width: MediaQuery.of(context).size.width * .4,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                          'Halloween Mini Project - PLTW Digital Electronics',
+                          style: TextStyle(
+                              color: Constants.primaryColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold))),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .05,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'images/tropeproject.png',
+                        height: MediaQuery.of(context).size.height * .5,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],
