@@ -151,6 +151,54 @@ class Blog extends StatelessWidget {
           )
         ],
       ),
+      SizedBox(height: MediaQuery.of(context).size.height * .1),
+      Row(
+        children: [
+          Container(
+            // height: MediaQuery.of(context).size.height * .5,
+            width: MediaQuery.of(context).size.width * .4,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                    alignment: Alignment.topLeft,
+                    child: Text('Blog 4 - December and January 2021',
+                        style: TextStyle(
+                            color: Constants.primaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold))),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .05,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      'images/loop.gif',
+                      height: MediaQuery.of(context).size.height * .5,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * .10),
+              child: Container(
+                height: MediaQuery.of(context).size.height * .555,
+                width: MediaQuery.of(context).size.width * .555,
+                child: Container(
+                    child: new Text(
+                        'If I was just starting my college application proccess, I would advise myself to stay better organized. It took months to come up with a good system (Jira, a project management tool), and by that time it was nearing the end of application season. Thus, to the future seniors I would highly reccomend starting early and staying ahead of the work. The most exciting thing about college to me is the independence that comes with it. Being able to live on your own and have to take responsibilty for your life sounds thrilling to me. Finally, the gif I included represents the menotony of the proccess. The constant regurgitating of essays, the hours spent filling our random forms, and the time spent studing for exams.',
+                        style: TextStyle(color: Colors.white, fontSize: 20))),
+              ),
+            ),
+          )
+        ],
+      ),
     ]);
   }
 }
