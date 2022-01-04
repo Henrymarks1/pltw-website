@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/components/appbarcontainer.dart';
+import 'package:website/components/capstone.dart';
 import 'package:website/components/completedProjects.dart';
 import 'package:website/components/homecontainer.dart';
 import 'package:website/components/inProgress.dart';
@@ -37,8 +38,9 @@ class _HomePageState extends State<HomePage> {
     List appBaOptions = [
       {"title": 'Completed Projects', "index": 1},
       {"title": 'In Progress', "index": 2},
-      {"title": 'Blog', "index": 3},
-      {"title": 'Resources', "index": 4},
+      {"title": 'Capstone Project', "index": 3},
+      {"title": 'Blog', "index": 4},
+      {"title": 'Resources', "index": 5},
     ];
 
     Future _scrollToIndex(index) async {
@@ -138,9 +140,24 @@ class _HomePageState extends State<HomePage> {
                   InProgress(),
                   SizedBox(height: MediaQuery.of(context).size.height * .2),
                   AutoScrollTag(
+                    controller: controller,
+                    index: 3,
+                    key: ValueKey(3),
+                    child: Container(
+                        padding: EdgeInsets.only(bottom: 10),
+                        alignment: Alignment.centerLeft,
+                        child: Text('Capstone Project',
+                            style: TextStyle(
+                                color: Constants.primaryvarient,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold))),
+                  ),
+                  Capstone(),
+                  SizedBox(height: MediaQuery.of(context).size.height * .2),
+                  AutoScrollTag(
                       controller: controller,
-                      index: 3,
-                      key: ValueKey(3),
+                      index: 4,
+                      key: ValueKey(4),
                       child: Container(
                           padding: EdgeInsets.only(bottom: 10),
                           alignment: Alignment.centerLeft,
@@ -153,8 +170,8 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: MediaQuery.of(context).size.height * .2),
                   AutoScrollTag(
                       controller: controller,
-                      index: 4,
-                      key: ValueKey(4),
+                      index: 5,
+                      key: ValueKey(5),
                       child: Container()),
                   Recorces(),
                 ]))));
