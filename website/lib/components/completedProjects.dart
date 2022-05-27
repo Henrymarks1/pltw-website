@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import '../constants.dart';
 
@@ -11,6 +12,10 @@ class Completed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    YoutubePlayerController _controller = YoutubePlayerController(
+        initialVideoId: 'NKWVQYPsyJE',
+        params: YoutubePlayerParams(loop: true, autoPlay: true, mute: true));
+
     return Column(
       children: [
         Row(
@@ -376,6 +381,170 @@ class Completed extends StatelessWidget {
                 ],
               ),
             ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              // height: MediaQuery.of(context).size.height * .5,
+              width: MediaQuery.of(context).size.width * .4,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                      alignment: Alignment.topLeft,
+                      child: Text('Capstone Project - PLTW Digital Electronics',
+                          style: TextStyle(
+                              color: Constants.primaryColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold))),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .05,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'images/straw.jpg',
+                        height: MediaQuery.of(context).size.height * .5,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.width * .16),
+                child: Container(
+                  // height: MediaQuery.of(context).size.height * .25,
+                  width: MediaQuery.of(context).size.width * .4,
+                  child: Container(
+                      child: new Text(
+                          "The idea for my final capstone project came when attempting relentlessly to suck out of a soggy paper straw. Recently, the city of Santa Monica, and others around the country have implemented policies to limit the harmful environmental effects of plastic straw. For business, this has meant a switch to alternatives. Thus we decided to create an alternative out of a polyester called polycaprolactone (PCL). PCL is a fully biodegradable substance that is FDA approved for medical use. Using this, we crafted our biodegradable straw, as seen on the right. This proved to exceed our expectations, lasting in water without breaking down, and biodegrading in natural conditions in under 6 months.",
+                          style: TextStyle(color: Colors.white, fontSize: 20))),
+                ),
+              ),
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              // height: MediaQuery.of(context).size.height * .5,
+              width: MediaQuery.of(context).size.width * .4,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .05,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'images/final_poster.png',
+                        height: MediaQuery.of(context).size.height * .5,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+                child: Container(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * .16),
+              child: Container(
+                // height: MediaQuery.of(context).size.height * .25,
+                width: MediaQuery.of(context).size.width * .4,
+                child: Container(
+                  child: new RichText(
+                      text: TextSpan(children: [
+                    TextSpan(
+                        text: "You can find our final poster ",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                    TextSpan(
+                        text: 'here.',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () async {
+                            if (await canLaunch(
+                                'https://drive.google.com/file/d/1MMh61KFUsGSceICGmGUHfJiFDHn4yoG7/view?usp=sharing'))
+                              await launch(
+                                  'https://drive.google.com/file/d/1MMh61KFUsGSceICGmGUHfJiFDHn4yoG7/view?usp=sharing');
+                          }),
+                  ])),
+                ),
+              ),
+            ))
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              // height: MediaQuery.of(context).size.height * .5,
+              width: MediaQuery.of(context).size.width * .4,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .05,
+                  ),
+                  Container(
+                      alignment: Alignment.topLeft,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: YoutubePlayerIFrame(
+                          controller: _controller,
+                          aspectRatio: 16 / 9,
+                        ),
+                      )),
+                ],
+              ),
+            ),
+            Expanded(
+                child: Container(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * .16),
+              child: Container(
+                // height: MediaQuery.of(context).size.height * .25,
+                width: MediaQuery.of(context).size.width * .4,
+                child: Container(
+                  child: new RichText(
+                      text: TextSpan(children: [
+                    TextSpan(
+                        text: "You can find our final commercial script ",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                    TextSpan(
+                        text: 'here.',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () async {
+                            if (await canLaunch(
+                                'https://docs.google.com/document/d/1xEzALPqasBCJih0K0pkH0mnnjIpyCNtFArn6P8FyIW0/edit?usp=sharing'))
+                              await launch(
+                                  'https://docs.google.com/document/d/1xEzALPqasBCJih0K0pkH0mnnjIpyCNtFArn6P8FyIW0/edit?usp=sharing');
+                          }),
+                  ])),
+                ),
+              ),
+            ))
           ],
         ),
       ],

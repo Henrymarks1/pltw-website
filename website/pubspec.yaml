@@ -30,6 +30,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   scroll_to_index:
   url_launcher:
+  youtube_player_flutter: ^8.0.0
+  youtube_player_iframe: ^2.2.2
+
   
 
 dev_dependencies:

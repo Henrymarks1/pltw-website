@@ -11,53 +11,53 @@ class InProgress extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Container(
-              // height: MediaQuery.of(context).size.height * .5,
-              width: MediaQuery.of(context).size.width * .4,
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Container(
-                      alignment: Alignment.topLeft,
-                      child: Text('Birthday Project - PLTW Digital Electronics',
-                          style: TextStyle(
-                              color: Constants.primaryColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold))),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * .05,
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Image.asset(
-                        'images/pltw_website.png',
-                        height: MediaQuery.of(context).size.height * .5,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width * .16),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * .25,
-                  width: MediaQuery.of(context).size.width * .4,
-                  child: Container(
-                      child: new Text(
-                          "When this project was first mentioned, I knew I wanted to build a website. My background involves more mobile development, so my skills with frontend web development were lacking. My saving grace came when I remembered that Flutter, the framework I use for cross plaform mobile development has a web version. Overall, I am pretty happy with how this has turned out so far. In the future I would like to work on improving some of the general UI and making it more friendly for people viewing the site from a mobile device",
-                          style: TextStyle(color: Colors.white, fontSize: 20))),
-                ),
-              ),
-            )
-          ],
-        ),
+        // Row(
+        //   children: [
+        //     Container(
+        //       // height: MediaQuery.of(context).size.height * .5,
+        //       width: MediaQuery.of(context).size.width * .4,
+        //       child: Column(
+        //         mainAxisSize: MainAxisSize.max,
+        //         children: [
+        //           Container(
+        //               alignment: Alignment.topLeft,
+        //               child: Text('Website - PLTW Digital Electronics',
+        //                   style: TextStyle(
+        //                       color: Constants.primaryColor,
+        //                       fontSize: 20,
+        //                       fontWeight: FontWeight.bold))),
+        //           SizedBox(
+        //             height: MediaQuery.of(context).size.height * .05,
+        //           ),
+        //           Container(
+        //             alignment: Alignment.topLeft,
+        //             child: ClipRRect(
+        //               borderRadius: BorderRadius.circular(15),
+        //               child: Image.asset(
+        //                 'images/pltw_website.png',
+        //                 height: MediaQuery.of(context).size.height * .5,
+        //               ),
+        //             ),
+        //           ),
+        //         ],
+        //       ),
+        //     ),
+        //     Expanded(
+        //       child: Container(
+        //         padding: EdgeInsets.only(
+        //             left: MediaQuery.of(context).size.width * .16),
+        //         child: Container(
+        //           height: MediaQuery.of(context).size.height * .25,
+        //           width: MediaQuery.of(context).size.width * .4,
+        //           child: Container(
+        //               child: new Text(
+        //                   "When this project was first mentioned, I knew I wanted to build a website. My background involves more mobile development, so my skills with frontend web development were lacking. My saving grace came when I remembered that Flutter, the framework I use for cross plaform mobile development has a web version. Overall, I am pretty happy with how this has turned out so far. In the future I would like to work on improving some of the general UI and making it more friendly for people viewing the site from a mobile device",
+        //                   style: TextStyle(color: Colors.white, fontSize: 20))),
+        //         ),
+        //       ),
+        //     )
+        //   ],
+        // ),
         Row(
           children: [
             Expanded(
