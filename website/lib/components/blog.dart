@@ -199,6 +199,102 @@ class Blog extends StatelessWidget {
           )
         ],
       ),
+      SizedBox(height: MediaQuery.of(context).size.height * .1),
+      Row(
+        children: [
+          Container(
+            // height: MediaQuery.of(context).size.height * .5,
+            width: MediaQuery.of(context).size.width * .4,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                    alignment: Alignment.topLeft,
+                    child: Text('Blog 5 - Final pt1',
+                        style: TextStyle(
+                            color: Constants.primaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold))),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .05,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      'images/rice.png',
+                      height: MediaQuery.of(context).size.height * .5,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * .10),
+              child: Container(
+                height: MediaQuery.of(context).size.height * .555,
+                width: MediaQuery.of(context).size.width * .555,
+                child: Container(
+                    child: new Text(
+                        'As of now, I plan on attending Rice University with a major in Computer Science and a minor in Entrepreneurship. I am very excited to pursue this path of study because I want to build products that improve the world. In the future, I would like to work on building startup companies, or potentially work at one of the major tech firms like Google or Facebook.',
+                        style: TextStyle(color: Colors.white, fontSize: 20))),
+              ),
+            ),
+          )
+        ],
+      ),
+      SizedBox(height: MediaQuery.of(context).size.height * .1),
+      Row(
+        children: [
+          Container(
+            // height: MediaQuery.of(context).size.height * .5,
+            width: MediaQuery.of(context).size.width * .4,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                    alignment: Alignment.topLeft,
+                    child: Text('Blog 5 - Final pt2',
+                        style: TextStyle(
+                            color: Constants.primaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold))),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .05,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      'images/finish.png',
+                      height: MediaQuery.of(context).size.height * .5,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * .10),
+              child: Container(
+                height: MediaQuery.of(context).size.height * .555,
+                width: MediaQuery.of(context).size.width * .555,
+                child: Container(
+                    child: new Text(
+                        'Overall, I am very proud of my PLTW career. In the first year, I was most proud of learning about 3D modeling and creating different objects. In Sophmore year, I am most proud of the fact that I earned a 5 on my AP CSP exam. In Junior year, I am most proud of creating the birthday project. But most importantly, in senior year our of everything else I am most proud of the capstone project. This project utilized all the skills from the prior years and lead to the creation of something great. For incoming PLTW seniors, I urge you not to rush the idea creation process of the capstone project. At Y Combinator, a famous startup incubator they have so many projects that don’t really have a problem around them, they call these projects SISPs (solutions in search of problems). I implore you, don’t create SISPs, you get out what you put in, so start with a great idea!',
+                        style: TextStyle(color: Colors.white, fontSize: 20))),
+              ),
+            ),
+          )
+        ],
+      ),
     ]);
   }
 }
